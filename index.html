@@ -56,10 +56,17 @@
       margin: 5px;
       border-radius: 5px;
     }
+
+    .light-mode {
+      background-color: #fff;
+      color: #000;
+    }
   </style>
 </head>
 <body>
+
   <header>
+    <button id="theme-toggle">Change Theme</button>
     <h1>htech2 </h1>
     <p>Web Developer/software engineer</p>
   </header>
@@ -125,8 +132,13 @@
     <p> <a href="https://github.com/Htech2h/">my github</a></p>
   </section>
 
+  
+
   <script>
-    
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
   </script>
 </body>
 </html>
